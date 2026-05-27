@@ -1,24 +1,22 @@
-from flask import flask, render_template
-from flask import request
+from flask import Flask, render_template
 
-app = flask(_name_)
+app = Flask(__name__)
 
 @app.route('/')
-@app.route('/index')
-def index():
- return render_template('index.html')
+def inicio():
+    return render_template('index.html')
 
-@app.route('/autenticar', methods = ['GET'])
-def autenticar():
-   usuario = request.args.get('usuario')
-   curso = request.args.get('curso')
-   cidade = request.args.get('cidade')
-   return render_template(
-      'autenticar.html',
-      usuario=usuario,
-      curso=curso,
-      cidade=cidade
-   )
+@app.route('/cursos')
+def cursos():
+    return render_template('cursos.html')
 
-if _name== 'main_':
-    app.run(debug = True)
+@app.route('/professores')
+def professores():
+    return render_template('professores.html')
+
+@app.route('/contato')
+def contato():
+    return render_template('contato.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
