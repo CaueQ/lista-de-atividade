@@ -1,28 +1,17 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Inscrição Campeonato de Games</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-    <h1>Inscrição para Campeonato de Games</h1>
-
-    <form action="/inscricao" method="post">
-        <label>Nickname:</label><br>
-        <input type="text" name="nickname"><br><br>
-
-        <label>Jogo:</label><br>
-        <select name="jogo">
-            <option value="">Selecione</option>
-            <option value="Minecraft">Minecraft</option>
-            <option value="Valorant">Valorant</option>
-            <option value="Free Fire">Free Fire</option>
-        </select><br><br>
-
-        <label>E-mail:</label><br>
-        <input type="email" name="email"><br><br>
-
-        <button type="submit">Inscrever</button>
+    <h2>Cadastro de Usuário</h2>
+    <form method="POST">
+<label>Nome:</label><br>
+<input type="text" name="Nome"><br><br>
+<button type="submit">Cadastrar</button>
     </form>
+<p>{{ mensagem }}</p>
 </body>
 </html>
